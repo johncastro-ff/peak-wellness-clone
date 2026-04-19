@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #1B2A54;
+  --color-ink: #121B24;
+  --color-gold: #D7A67B;
+  --color-cream: #F6F2E9;
+  --color-muted: #5E5E5E;
+  --color-divider: #E5E0D6;
+
+  --font-heading: "Josefin Sans", sans-serif;
+  --font-body: "Figtree", sans-serif;
+
+  --radius-none: 0;
+}
+
+html, body {
+  font-family: "Figtree", sans-serif;
+  color: #5E5E5E;
+  background: #ffffff;
+}
+
+/* Force zero border-radius everywhere — brand trait */
+* {
+  border-radius: 0 !important;
+}
+
+/* Marquee animation */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}

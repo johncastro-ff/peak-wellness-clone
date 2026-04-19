@@ -1,0 +1,631 @@
+---
+import "../styles/global.css";
+
+const navLinks = [
+  { label: "Wellness", href: "/wellness/" },
+  { label: "Medical", href: "/medical/" },
+  { label: "Aesthetics", href: "/aesthetics/" },
+  { label: "Body Shaping", href: "/body-shaping/" },
+  { label: "About", href: "/about/" },
+];
+
+const heroBenefits = [
+  "FEEL BETTER, HEAL FASTER",
+  "BUILD MUSCLE, LOSE FAT",
+  "RELIEVE PAIN, MOVE FREELY",
+  "SIGNIFICANT WEIGHT LOSS",
+  "AMAZING SKIN, LESS DOWNTIME",
+];
+
+const brandLogos = [
+  { src: "/images/brand-44687c.png", alt: "Pure Wave" },
+  { src: "/images/brand-aspenlaser.png", alt: "Aspen Laser" },
+  { src: "/images/brand-btl.png", alt: "BTL Aesthetics" },
+  { src: "/images/brand-cryo.png", alt: "Cryo Relief" },
+  { src: "/images/brand-davinci.png", alt: "Davinci Medical" },
+  { src: "/images/brand-emsculptneo.png", alt: "Emsculpt Neo" },
+  { src: "/images/brand-hrt.png", alt: "HRT" },
+  { src: "/images/brand-hypermax.png", alt: "HyperMax Oxygen" },
+  { src: "/images/brand-normatec.png", alt: "Normatec" },
+  { src: "/images/brand-theralight360.png", alt: "TheraLight360" },
+  { src: "/images/brand-pulsepemf.webp", alt: "Pulse PEMF" },
+];
+
+const popularTreatments = [
+  { tag: "WELLNESS", title: "Superhuman Protocol", img: "/images/red-light-therapy.jpg" },
+  { tag: "MEDICAL", title: "Weight Loss", img: "/images/weight-loss-shots.webp" },
+  { tag: "AESTHETICS", title: "Helix Laser", img: "/images/helix-laser-service.webp" },
+  { tag: "BODY SHAPING", title: "Emsculpt Neo", img: "/images/emsculpt-neo.jpg" },
+  { tag: "WELLNESS", title: "IV Therapy", img: "/images/iv-therapy.jpg" },
+];
+
+const whyChoose = [
+  { title: "Science-Backed Wellness", body: "Advanced therapies for real health improvements." },
+  { title: "Personalized Care Plans", body: "Treatments tailored to your unique goals." },
+  { title: "Experienced Holistic Leaders", body: "Guiding you with decades of expertise." },
+  { title: "Cutting-Edge Results", body: "Latest tech for visible, lasting changes." },
+  { title: "Your Vitality Elevated", body: "Feel better, look better, live fully." },
+];
+
+const beforeAfters = [
+  { label: "Helix Laser", img: "/images/ba-helix-face.webp" },
+  { label: "EMTONE", img: "/images/ba-emtone-butt.webp" },
+  { label: "EMTONE", img: "/images/ba-emtone-arms.webp" },
+  { label: "EMSCULPT + Weight Loss Shots", img: "/images/ba-emsculpt-wl.webp" },
+  { label: "Semaglutide", img: "/images/ba-semaglutide.jpg" },
+  { label: "EMSCULPT", img: "/images/ba-emsculpt-abs.webp" },
+  { label: "Helix Laser Stretch", img: "/images/ba-helix-stretch.webp" },
+  { label: "EMSCULPT + WL", img: "/images/ba-emsculpt-wl-man.webp" },
+];
+
+const financingFeatures = [
+  "Fast & Easy",
+  "Budget Friendly",
+  "0% Interest Available",
+  "No Hard Credit Checks",
+  "Flexible Payments",
+];
+
+const testimonials = [
+  { quote: "Hands down the most holistic place to invigorate body and mind. I used the Aspen laser to treat my ankle from a nerve pain while I completed a ketamine program. We saw significant and positive changes.", name: "KAREN" },
+  { quote: "I had bad chronic pain in my shoulder. Edye and Pani came up with a game plan. Between the Aspen laser, red light therapy and the pemf bed, I've had very little to no pain. I'm thankful for Edye's expertise and knowledge. I'm now living pain free. Thank you", name: "JIM" },
+  { quote: "The Peak is the place to go for your wellness treatments! The staff is knowledgeable, helpful, and generous with their time. They give extra attention to your specific needs and tailor your care individually! I highly recommend you visit The Peak!", name: "SUE" },
+  { quote: "My girlfriend asked me for months to try the services, but I didn't take her up on it until my elbow was badly hurting — it was the best thing I could've done. I did Cryo, PEMF, and red light. My elbow feels so much better. Also, shout out to Edye — amazing owner!", name: "WILLIAM" },
+  { quote: "Had an Emsculpt Neo session. What a cool device with good results after just a couple of treatments. I'll be back for more definitely. Staff was amazing, very welcoming and helpful through the entire experience.", name: "MARK" },
+];
+
+const blogPosts = [
+  { title: "Can Light Therapy Help Nerve Pain?", img: "/images/blog1.webp" },
+  { title: "A Better Weigh to Lose Weight", img: "/images/blog2.webp" },
+  { title: "How 3X4 Genetic Testing Can Help You Decode Your Health", img: "/images/blog3.webp" },
+  { title: "The Power of NAD+ for Health and Vitality", img: "/images/blog4.webp" },
+  { title: "Unleashing Your Inner Superhero", img: "/images/blog5.webp" },
+  { title: "Wellness Wisdom from The Peak", img: "/images/blog6.webp" },
+];
+
+const instagramTiles = [
+  "/images/ig1.webp",
+  "/images/ig2.webp",
+  "/images/ig3.webp",
+  "/images/ig4.webp",
+  "/images/ig5.webp",
+  "/images/ig6.webp",
+];
+
+const footerNav = ["Wellness", "Medical", "Aesthetics", "Body Shaping", "About", "Memberships", "Blog"];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>The Peak Wellness Spa — Scottsdale, AZ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;500;700;800;900&family=Figtree:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-white text-[#5E5E5E] font-[Figtree]">
+
+    {/* ============================================
+        TOP STRIP
+        ============================================ */}
+    <div class="hidden md:block bg-[#F6F2E9] py-[9px] px-[40px]">
+      <div class="max-w-[1440px] mx-auto flex items-center justify-between text-[14px] font-[Figtree] font-light text-[#1B2A54]">
+        <a href="#" class="hover:underline">8912 E Pinnacle Peak Rd Suite F-4, Scottsdale, AZ 85255</a>
+        <div class="flex items-center gap-6">
+          <span>Mon-Fri 9-4, Sat 9-2, Sun Closed</span>
+          <a href="#" aria-label="Facebook" class="hover:text-[#D7A67B]">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="hover:text-[#D7A67B]">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    {/* ============================================
+        MAIN HEADER / NAVIGATION
+        ============================================ */}
+    <header class="sticky top-0 z-50 bg-white border-b border-[#E5E0D6]/60">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-10 h-[90px] flex items-center justify-between">
+        <a href="/" class="flex items-center">
+          <img src="/images/logo-peak.png" alt="The Peak Wellness Spa" class="h-[48px] w-auto" />
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8">
+          {navLinks.map(l => (
+            <a
+              href={l.href}
+              class="font-[Josefin_Sans] font-medium text-[15px] tracking-[0.9px] uppercase text-[#121B24] hover:text-[#D7A67B] transition-colors flex items-center gap-1"
+            >
+              {l.label}
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+          ))}
+        </nav>
+
+        <div class="hidden md:flex items-center gap-5">
+          <a href="tel:6023131488" class="font-[Josefin_Sans] font-medium text-[15px] tracking-[0.9px] uppercase text-[#1B2A54] hover:text-[#D7A67B] transition-colors">
+            (602) 313-1488
+          </a>
+          <a
+            href="#schedule"
+            class="bg-transparent text-[#1B2A54] border border-[#1B2A54] px-9 py-[11px] font-[Figtree] font-semibold text-[13px] tracking-[2px] uppercase hover:bg-[#1B2A54] hover:text-white transition-colors"
+          >
+            Schedule
+          </a>
+        </div>
+
+        <button id="mobile-nav-toggle" class="lg:hidden p-2" aria-label="Toggle menu">
+          <svg class="w-6 h-6 text-[#121B24]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+
+      <div id="mobile-nav" class="hidden lg:hidden bg-white border-t border-[#E5E0D6]">
+        <div class="flex flex-col px-6 py-4 gap-4">
+          {navLinks.map(l => (
+            <a href={l.href} class="font-[Josefin_Sans] font-medium text-[15px] tracking-[0.9px] uppercase text-[#121B24]">{l.label}</a>
+          ))}
+          <a href="tel:6023131488" class="font-[Josefin_Sans] font-medium text-[15px] tracking-[0.9px] uppercase text-[#1B2A54]">(602) 313-1488</a>
+          <a href="#schedule" class="bg-[#1B2A54] text-white text-center px-9 py-3 font-[Figtree] font-semibold text-[13px] tracking-[2px] uppercase">Schedule</a>
+        </div>
+      </div>
+    </header>
+
+    {/* ============================================
+        HERO
+        ============================================ */}
+    <section class="relative min-h-[774px] flex items-center">
+      <img src="/images/hero-lobby.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-black/30"></div>
+
+      <div class="relative z-10 max-w-[1440px] mx-auto px-6 md:px-10 py-24 w-full grid lg:grid-cols-[1.3fr_1fr] gap-12 items-center">
+        <div class="text-white flex flex-col items-center text-center md:items-start md:text-left">
+          <h1 class="font-[Josefin_Sans] font-light text-[22px] leading-[1.1] uppercase text-[#D7A67B] mb-6">
+            Wellness Center in Scottsdale, AZ
+          </h1>
+          <p class="font-[Josefin_Sans] font-black text-[40px] sm:text-[58px] leading-none tracking-[0.2px] uppercase text-white mb-8">
+            Unlock Your Peak Potential
+          </p>
+          <p class="font-[Figtree] font-light text-[21px] md:text-[24px] leading-[1.6] text-white/95 mb-10 max-w-[640px]">
+            Look better, feel better, and live more fully with advanced treatments of our medical spa &amp; wellness center in Scottsdale that blend science and nature to truly transform your health and vitality.
+          </p>
+
+          <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+            <a href="#treatments" class="bg-white text-[#1B2A54] border border-white px-9 py-3 font-[Figtree] font-semibold text-[13px] tracking-[2px] uppercase hover:bg-[#F6F2E9] transition-colors">
+              Book Now
+            </a>
+            <a href="#treatments" class="hidden md:inline-block bg-[#1B2A54] text-white border border-[#1B2A54] px-9 py-3 font-[Figtree] font-semibold text-[13px] tracking-[2px] uppercase hover:bg-[#121B24] transition-colors">
+              Popular Services
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute bottom-0 left-0 right-0 bg-[#1B2A54]/85 backdrop-blur-sm hidden md:block">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-10 py-5 grid grid-cols-2 lg:grid-cols-5 gap-4 text-white">
+          {heroBenefits.map(b => (
+            <div class="flex items-center gap-2 font-[Josefin_Sans] font-medium text-[13px] tracking-[1.5px] uppercase">
+              <svg class="w-4 h-4 text-[#D7A67B] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+              {b}
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ============================================
+        ABOUT — YOUR JOURNEY
+        ============================================ */}
+    <section class="pt-[147px] pb-[63px] bg-white">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-10 grid lg:grid-cols-2 gap-16 items-center">
+        <div class="relative">
+          <img src="/images/peak-lobby-4.jpg" alt="The Peak lobby" class="w-full h-[520px] object-cover" />
+          <img src="/images/biohacking.webp" alt="Biohacking room" class="absolute bottom-[-60px] right-[-20px] w-[260px] h-[180px] object-cover border-8 border-white shadow-xl hidden md:block" />
+        </div>
+
+        <div>
+          <span class="font-[Josefin_Sans] font-medium text-[13px] tracking-[3px] uppercase text-[#D7A67B] block mb-5">
+            Scottsdale's Premier Wellness Spa
+          </span>
+          <h2 class="font-[Josefin_Sans] font-extrabold text-[32px] md:text-[39px] leading-[1.1] uppercase text-[#121B24] mb-6">
+            Your Journey to Peak Wellness Begins Here
+          </h2>
+          <p class="font-[Figtree] font-light text-[18px] md:text-[21px] leading-[1.8] tracking-[0.2px] text-[#5E5E5E] mb-8">
+            What if you could defy aging and amplify your vitality? Imagine how much more fulfilling life would feel if the pain was gone, you moved more freely, had your dream body, and woke up everyday looking and feeling amazing? At The Peak, it's possible. Combining decades of holistic and medical experience with the world's most innovative and effective equipment, we'll help you live a healthier, more vibrant life.
+          </p>
+          <a href="/about/" class="inline-block bg-transparent text-[#1B2A54] border border-[#1B2A54] px-9 py-3 font-[Figtree] font-semibold text-[13px] tracking-[2px] uppercase hover:bg-[#1B2A54] hover:text-white transition-colors">
+            About The Peak
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {/* ============================================
+        BRAND LOGO MARQUEE
+        ============================================ */}
+    <section class="py-[60px] bg-[#F6F2E9] overflow-hidden border-y border-[#E5E0D6]/60">
+      <div class="relative">
+        <div class="flex animate-marquee gap-20 w-max items-center">
+          {[...brandLogos, ...brandLogos].map(b => (
+            <img src={b.src} alt={b.alt} class="h-[60px] w-auto max-w-[180px] object-contain grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all" />
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ============================================
+        POPULAR TREATMENTS
+        ============================================ */}
+    <section id="treatments" class="py-[120px] bg-[#1B2A54]">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-10">
+        <h2 class="font-[Josefin_Sans] font-extrabold text-[32px] md:text-[42px] leading-[1.1] uppercase text-white text-center mb-16 tracking-[1px]">
+          Popular Treatments
+        </h2>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+          {popularTreatments.map(t => (
+            <a href="#" class="group relative block h-[460px] overflow-hidden">
+              <img src={t.img} alt={t.title} class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/70"></div>
+              <div class="relative z-10 h-full flex flex-col justify-between p-6 text-white">
+                <span class="font-[Josefin_Sans] font-medium text-[11px] tracking-[3px] uppercase text-[#D7A67B]">{t.tag}</span>
+                <div>
+                  <h3 class="font-[Josefin_Sans] font-black text-[24px] leading-[1.05] uppercase text-white mb-4">
+                    {t.title}
+                  </h3>
+                  <span class="inline-block border border-white px-5 py-2 font-[Figtree] font-semibold text-[11px] tracking-[2px] uppercase">
+                    Learn More
+                  </span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ============================================
+        WHY CHOOSE US — THE PEAK DIFFERENCE
+        ============================================ */}
+    <section class="py-[150px] bg-white relative">
+      <img src="/images/why-choose-bg.webp" alt="" class="absolute inset-0 w-full h-full object-cover opacity-30 pointer-events-none" />
+      <div class="max-w-[1440px] mx-auto px-6 md:px-10 grid lg:grid-cols-2 gap-16 items-center relative">
+        <div>
+          <span class="font-[Josefin_Sans] font-medium text-[13px] tracking-[3px] uppercase text-[#D7A67B] block mb-5">
+            Why Choose Us
+          </span>
+          <h3 class="font-[Josefin_Sans] font-black text-[32px] md:text-[42px] leading-[1.1] uppercase text-[#121B24] mb-10">
+            The Peak Difference:<br/>Wellness Reimagined
+          </h3>
+
+          <div class="space-y-5 mb-10">
+            {whyChoose.map(w => (
+              <div class="flex gap-5 pb-5 border-b border-[#E5E0D6]/70">
+                <div class="w-12 h-12 border border-[#D7A67B] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-5 h-5 text-[#D7A67B]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                </div>
+                <div>
+                  <h4 class="font-[Josefin_Sans] font-bold text-[16px] md:text-[18px] tracking-[-0.3px] uppercase text-[#121B24] mb-1">{w.title}</h4>
+                  <p class="font-[Figtree] font-light text-[16px] md:text-[17px] leading-[1.6] text-[#5E5E5E]">{w.body}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <a href="#schedule" class="inline-block bg-[#1B2A54] text-white border border-[#1B2A54] px-9 py-3 font-[Figtree] font-semibold text-[13px] tracking-[2px] uppercase hover:bg-[#121B24] transition-colors">
+            Schedule Now
+          </a>
+        </div>
+
+        <div class="relative">
+          <img src="/images/wellness-spa-treatment.webp" alt="Treatment" class="w-full h-[560px] object-cover" />
+          <img src="/images/body-sculpting.webp" alt="Body sculpting" class="absolute bottom-[-60px] left-[-20px] w-[280px] h-[200px] object-cover border-8 border-white shadow-xl hidden md:block" />
+        </div>
+      </div>
+    </section>
+
+    {/* ============================================
+        MEMBERSHIP BANNER
+        ============================================ */}
+    <section class="py-[63px] bg-[#F6F2E9]">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="flex items-center gap-6">
+          <div class="w-16 h-16 bg-[#1B2A54] flex items-center justify-center flex-shrink-0">
+            <svg class="w-8 h-8 text-[#D7A67B]" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          </div>
+          <h3 class="font-[Josefin_Sans] font-extrabold text-[22px] md:text-[28px] leading-[1.2] uppercase text-[#121B24]">
+            Elevate Your Health for Less with a Peak Membership!
+          </h3>
+        </div>
+        <a href="/memberships/" class="bg-[#1B2A54] text-white px-9 py-3 font-[Figtree] font-semibold text-[13px] tracking-[2px] uppercase hover:bg-[#121B24] transition-colors whitespace-nowrap">
+          View Memberships
+        </a>
+      </div>
+    </section>
+
+    {/* ============================================
+        REAL PEOPLE. REAL RESULTS. — BEFORE/AFTER
+        ============================================ */}
+    <section class="py-[150px] bg-[#F6F2E9]">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-10 text-center">
+        <h3 class="font-[Josefin_Sans] font-black text-[32px] md:text-[42px] leading-[1.1] uppercase text-[#121B24] mb-4">
+          Real People. Real Results.
+        </h3>
+        <p class="font-[Figtree] font-light text-[18px] md:text-[21px] leading-[1.8] text-[#5E5E5E] mb-14 max-w-[700px] mx-auto">
+          Before And After Results That Speak For Themselves.
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          {beforeAfters.map(ba => (
+            <div class="text-center">
+              <img src={ba.img} alt={ba.label} class="w-full h-[280px] object-cover mb-4" />
+              <p class="font-[Josefin_Sans] font-bold text-[13px] tracking-[2px] uppercase text-[#121B24]">{ba.label}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ============================================
+        FINANCING STRIP — TREAT YOURSELF TODAY
+        ============================================ */}
+    <section class="bg-[#1B2A54] text-white">
+      <div class="max-w-[1440px] mx-auto grid lg:grid-cols-2">
+        <div class="relative min-h-[380px]">
+          <img src="/images/pretty-woman-beach.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-center" />
+        </div>
+        <div class="p-10 md:p-16 flex flex-col justify-center">
+          <h2 class="font-[Josefin_Sans] font-extrabold text-[28px] md:text-[39px] leading-[1.1] uppercase text-white mb-6">
+            Treat Yourself Today, Pay Later — You're Worth It.
+          </h2>
+          <p class="font-[Figtree] font-light text-[18px] leading-[1.7] text-white/90 mb-8 max-w-[560px]">
+            When we don't feel good about ourselves, everything else suffers. You don't have to put off feeling your best any longer! Cherry makes it easy to look and feel great now.
+          </p>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-3 mb-8">
+            {financingFeatures.map(f => (
+              <div class="flex items-center gap-2 font-[Figtree] font-semibold text-[13px] tracking-[1px]">
+                <svg class="w-4 h-4 text-[#D7A67B] flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                {f}
+              </div>
+            ))}
+          </div>
+          <a href="#" class="self-start bg-[#D7A67B] text-[#1B2A54] px-9 py-3 font-[Figtree] font-semibold text-[13px] tracking-[2px] uppercase hover:bg-white transition-colors">
+            Apply Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {/* ============================================
+        SINGLE HERO TESTIMONIAL
+        ============================================ */}
+    <section class="py-[150px] bg-white">
+      <div class="max-w-[900px] mx-auto px-6 text-center">
+        <div class="flex justify-center gap-1 mb-8 text-[#D7A67B]">
+          {[1,2,3,4,5].map(() => (
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          ))}
+        </div>
+        <blockquote class="font-[Josefin_Sans] font-semibold text-[28px] md:text-[38px] leading-[1.25] uppercase text-[#121B24] mb-8">
+          "This is the most amazing one-stop wellness and anti-aging spa and I feel blessed to have it in Scottsdale!"
+        </blockquote>
+        <p class="font-[Josefin_Sans] font-medium text-[13px] tracking-[3px] uppercase text-[#5E5E5E] mb-2">
+          — Bucket List Bliss
+        </p>
+        <p class="font-[Josefin_Sans] font-medium text-[13px] tracking-[3px] uppercase text-[#D7A67B]">
+          5.0 Rating Based on 100+ Reviews
+        </p>
+      </div>
+    </section>
+
+    {/* ============================================
+        GIFT CARD SECTION
+        ============================================ */}
+    <section class="relative py-[63px]">
+      <img src="/images/blue-marble.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-[#1B2A54]/80"></div>
+      <div class="relative max-w-[1440px] mx-auto px-6 md:px-10 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="flex justify-center">
+          <img src="/images/peak-gift-card.jpg" alt="Peak Gift Card" class="max-w-[420px] w-full h-auto" />
+        </div>
+        <div class="text-white">
+          <h2 class="font-[Josefin_Sans] font-extrabold text-[28px] md:text-[39px] leading-[1.15] uppercase mb-6">
+            <span class="text-[#D7A67B]">Wellness =</span><br/>
+            The Best Gift Ever
+          </h2>
+          <p class="font-[Figtree] font-light text-[18px] md:text-[21px] leading-[1.7] text-white/90 mb-8 max-w-[560px]">
+            Good health is life's greatest gift. Give the best gift ever with a Peak Gift Card!
+          </p>
+          <a href="#" class="inline-block bg-white text-[#1B2A54] px-9 py-3 font-[Figtree] font-semibold text-[13px] tracking-[2px] uppercase hover:bg-[#F6F2E9] transition-colors">
+            Buy a Peak Gift Card
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {/* ============================================
+        TESTIMONIAL CAROUSEL — WHAT OUR PATIENTS
+        ============================================ */}
+    <section class="py-[150px] bg-white">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-10">
+        <h3 class="font-[Josefin_Sans] font-black text-[32px] md:text-[42px] leading-[1.1] uppercase text-[#121B24] text-center mb-20">
+          What Our Patients Are Saying
+        </h3>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10 lg:gap-14">
+          {testimonials.slice(0,3).map(t => (
+            <div class="text-center">
+              <div class="flex justify-center gap-1 mb-5 text-[#D7A67B]">
+                {[1,2,3,4,5].map(() => (
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                ))}
+              </div>
+              <p class="font-[Figtree] font-light text-[19px] leading-[1.8] text-[#121B24] mb-6">"{t.quote}"</p>
+              <p class="font-[Josefin_Sans] font-medium text-[13px] tracking-[3px] uppercase text-[#5E5E5E]">— {t.name}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ============================================
+        VIDEO SECTION
+        ============================================ */}
+    <section class="relative h-[500px] flex items-center justify-center">
+      <img src="/images/video-background.webp" alt="" class="absolute inset-0 w-full h-full object-cover" />
+      <div class="absolute inset-0" style="background: rgba(2,1,1,0.78)"></div>
+      <button aria-label="Play video" class="relative z-10 w-24 h-24 border-2 border-white flex items-center justify-center hover:bg-white/10 transition-colors">
+        <svg class="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+    </section>
+
+    {/* ============================================
+        FREE DEMO / LEAD FORM
+        ============================================ */}
+    <section id="schedule" class="py-[150px] bg-white">
+      <div class="max-w-[1200px] mx-auto px-6 md:px-10 grid lg:grid-cols-2 gap-12 items-center">
+        <img src="/images/home-2-9.webp" alt="New to The Peak" class="w-full h-[480px] object-cover" />
+        <div>
+          <span class="inline-block bg-[#1B2A54] text-white px-3 py-1 font-[Figtree] font-semibold text-[11px] tracking-[2px] uppercase mb-4">Free Demo</span>
+          <h3 class="font-[Josefin_Sans] font-black text-[32px] md:text-[42px] leading-[1.1] uppercase text-[#121B24] mb-5">
+            New to The Peak?
+          </h3>
+          <p class="font-[Figtree] font-light text-[18px] leading-[1.7] text-[#5E5E5E] mb-8">
+            Sign up for our VIP savings list now to enjoy a <a href="#" class="text-[#1B2A54] underline font-semibold">FREE demo</a> of Red Light Therapy, PEMF, Aspen Laser, or Emsella for Incontinence!
+          </p>
+
+          <form class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input type="text" placeholder="First Name" class="border border-[#E5E0D6] px-4 py-3 font-[Figtree] text-[15px] focus:outline-none focus:border-[#1B2A54]" />
+            <input type="text" placeholder="Last Name" class="border border-[#E5E0D6] px-4 py-3 font-[Figtree] text-[15px] focus:outline-none focus:border-[#1B2A54]" />
+            <input type="tel" placeholder="Phone" class="border border-[#E5E0D6] px-4 py-3 font-[Figtree] text-[15px] focus:outline-none focus:border-[#1B2A54]" />
+            <input type="email" placeholder="Email" class="border border-[#E5E0D6] px-4 py-3 font-[Figtree] text-[15px] focus:outline-none focus:border-[#1B2A54]" />
+            <label class="md:col-span-2 flex gap-3 items-start font-[Figtree] font-light text-[13px] leading-[1.5] text-[#5E5E5E]">
+              <input type="checkbox" class="mt-1" />
+              <span>I consent to receive non-marketing messages from The Peak Wellness Spa in relation to my inquiry, and occasional marketing messages for savings or services. Frequency varies. Message &amp; data rates may apply. Reply HELP for assistance, or STOP to discontinue. <a href="#" class="underline">Terms &amp; Conditions</a> / <a href="#" class="underline">Privacy Policy</a></span>
+            </label>
+            <button type="submit" class="md:col-span-2 bg-[#1B2A54] text-white px-9 py-4 font-[Figtree] font-semibold text-[13px] tracking-[2px] uppercase hover:bg-[#121B24] transition-colors justify-self-start">
+              Claim My Free Demo!
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    {/* ============================================
+        BLOG + INSTAGRAM
+        ============================================ */}
+    <section class="pt-[168px] pb-[147px] bg-white">
+      <div class="max-w-[1440px] mx-auto px-6 md:px-10">
+        <h4 class="font-[Josefin_Sans] font-black text-[28px] md:text-[36px] leading-[1.1] tracking-[-0.2px] uppercase text-[#121B24] text-center mb-14">
+          Wellness Insights From Our Blog
+        </h4>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5 mb-24">
+          {blogPosts.slice(0,5).map(p => (
+            <a href="#" class="group block">
+              <div class="overflow-hidden mb-4">
+                <img src={p.img} alt={p.title} class="w-full h-[220px] object-cover group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <h5 class="font-[Josefin_Sans] font-bold text-[15px] leading-[1.35] uppercase text-[#121B24] tracking-[-0.2px]">{p.title}</h5>
+            </a>
+          ))}
+        </div>
+
+        <div class="text-center mb-10">
+          <span class="inline-block font-[Josefin_Sans] font-medium text-[13px] tracking-[3px] uppercase text-[#D7A67B]">
+            Instagram @thepeakspa
+          </span>
+        </div>
+        <div class="grid grid-cols-3 md:grid-cols-6 gap-2">
+          {instagramTiles.map(src => (
+            <a href="#" class="block overflow-hidden">
+              <img src={src} alt="" class="w-full aspect-square object-cover hover:scale-105 transition-transform" />
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    {/* ============================================
+        FOOTER
+        ============================================ */}
+    <footer class="bg-white border-t border-[#E5E0D6]">
+      {/* footer nav strip */}
+      <div class="bg-[#1B2A54]">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-10 py-5 flex flex-wrap justify-center gap-6 md:gap-10">
+          {footerNav.map(l => (
+            <a href="#" class="font-[Josefin_Sans] font-medium text-[14px] tracking-[1.5px] uppercase text-white hover:text-[#D7A67B] transition-colors">{l}</a>
+          ))}
+        </div>
+      </div>
+
+      <div class="max-w-[1440px] mx-auto px-6 md:px-10 py-16 grid md:grid-cols-3 gap-12">
+        <div>
+          <img src="/images/logo-peak.png" alt="The Peak Wellness Spa" class="h-[64px] w-auto mb-5" />
+          <p class="font-[Figtree] font-light text-[16px] leading-[1.7] text-[#5E5E5E] max-w-[280px]">
+            Blending science &amp; nature to promote wellness.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-[Josefin_Sans] font-black text-[24px] md:text-[28px] uppercase text-[#121B24] mb-5">Visit The Peak</h4>
+          <a href="#" class="block font-[Figtree] font-light text-[16px] text-[#1B2A54] mb-5 hover:underline">
+            8912 E Pinnacle Peak Rd Suite F-4<br/>Scottsdale, AZ 85255
+          </a>
+          <ul class="font-[Figtree] font-light text-[15px] text-[#5E5E5E] space-y-1 mb-6">
+            <li>Mon-Fri: 9am - 4pm</li>
+            <li>Sat: 9am - 2pm</li>
+            <li>Sunday: Closed</li>
+          </ul>
+          <a href="#" class="font-[Josefin_Sans] font-bold text-[15px] tracking-[2px] uppercase text-[#1B2A54] hover:text-[#D7A67B]">Buy a Gift Card</a>
+        </div>
+
+        <div>
+          <h4 class="font-[Josefin_Sans] font-black text-[24px] md:text-[28px] uppercase text-[#121B24] mb-5">Contact</h4>
+          <a href="tel:6023131488" class="block font-[Figtree] text-[18px] text-[#1B2A54] mb-3 hover:text-[#D7A67B]">(602) 313-1488</a>
+          <a href="mailto:info@thepeakspa.com" class="block font-[Figtree] text-[16px] text-[#1B2A54] mb-6 hover:text-[#D7A67B]">info@thepeakspa.com</a>
+          <a href="#schedule" class="inline-block bg-[#1B2A54] text-white px-9 py-3 font-[Figtree] font-semibold text-[13px] tracking-[2px] uppercase hover:bg-[#121B24] transition-colors mb-6">
+            Schedule Now
+          </a>
+          <div class="flex gap-3">
+            <a href="#" aria-label="Facebook" class="w-10 h-10 bg-[#1B2A54] flex items-center justify-center text-white hover:bg-[#D7A67B] transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram" class="w-10 h-10 bg-[#1B2A54] flex items-center justify-center text-white hover:bg-[#D7A67B] transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" aria-label="Google" class="w-10 h-10 bg-[#1B2A54] flex items-center justify-center text-white hover:bg-[#D7A67B] transition-colors">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .307 5.387.307 12s5.56 12 12.173 12c3.573 0 6.267-1.173 8.373-3.36 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.053H12.48z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-[#E5E0D6]">
+        <div class="max-w-[1440px] mx-auto px-6 md:px-10 py-6 text-center font-[Figtree] text-[13px] text-[#5E5E5E]">
+          © 2026 The Peak Wellness Spa, <a href="#" class="hover:text-[#1B2A54]">Privacy Policy</a> - Made with ♥ by RizeUp Marketing
+        </div>
+      </div>
+
+      <div class="border-t border-[#E5E0D6] bg-[#F6F2E9]">
+        <div class="max-w-[1000px] mx-auto px-6 py-10 text-center font-[Figtree] font-light text-[12px] leading-[1.7] text-[#5E5E5E]">
+          The information provided on this website has not been evaluated by the FDA. Our services are for wellness only, and not intended to diagnose, cure, prevent, or treat any disease.
+          <div class="mt-6 font-[Josefin_Sans] font-bold text-[16px] tracking-[4px] uppercase text-[#1B2A54]">SUPERHUMAN® PROTOCOL</div>
+        </div>
+      </div>
+    </footer>
+
+    <script is:inline>
+      const btn = document.getElementById('mobile-nav-toggle');
+      const menu = document.getElementById('mobile-nav');
+      if (btn && menu) {
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+      }
+    </script>
+  </body>
+</html>
