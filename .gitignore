@@ -28,3 +28,4 @@ pnpm-debug.log*
 verify-*.png
 full-page.jpeg
 snapshot.md
+.vercel
